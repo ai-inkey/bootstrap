@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY SCHOOL WEBSITE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<style>*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  
+  body{
+      background-color: white;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .menu_bar{
+      background-color: black;
+      text-align: center;
+  }
+  .menu_bar ul{
+      display: inline-flex;
+      list-style: none;
+      color: white;
+      cursor: pointer;
+  }
+  .menu_bar ul li{
+      width: 150px;
+      margin: 20px;
+      padding: 15px;
+      cursor: pointer;
+      position: relative;
+  }
+  .menu_bar ul li a{
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+      margin-top: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+  .menu_bar ul li::after{
+      content: '';
+      height: 3px;
+      width: 0;
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      transition: 0.5s;
+  }
+  .menu_bar ul li :hover::after{
+      width: 100%;
+  }
+  .active,.menu_bar ul li:hover{
+      background:green;
+      border-radius: 18px;
+  }
+  .menu_bar.fa{
+      margin-left:10px ;
+  }
+  .sub_menu{
+      display: none;
+  }
+  .menu_bar ul li:hover .sub_menu{
+      display: block;
+      position: absolute;
+      background: black;
+      margin-top: 15px;
+      margin-left: -15px;
+  }
+  .menu_bar ul li:hover .sub_menu ul{
+      display: block;
+      margin: 10px;
+  }
+  .menu_bar ul li:hover .sub_menu ul li{
+      width: 170px;
+      padding: 10px;
+      border-bottom:1px dotted;
+      background: transparent;
+      text-align: center;
+  }
+  .menu_bar ul li:hover .sub_menu ul li a:hover{
+      color: red;
+  }
+  .fa-angle-right{
+      float: right;
+  }
+  .sub_menu-2{
+      display: none;
+  }
+  .hover-me:hover .sub_menu-2{
+      position: absolute;
+      display: block;
+      margin-top: -40px;
+      margin-left: 140px;
+      background: rgba(0, 100, 0, );
+  }
+  .my-school-2{
+      width:100%;
+      height: 50%;
+      color: blue;
+      position: absolute;
+      margin-left: 650px;
+      margin-top: 280px;
+      font-size: xx-large;
+  }
+  .my-school-2:hover{
+      color: red;
+      transition: backround-color 100s
+      color 100s;
+  }
+  .h4{
+      margin-top: 500px;
+      margin-left:100px ;
+      color:greenyellow ;
+      font-size: xx-large;
+  }
+  .h5{
+      margin-top: 30px;
+      margin-left: 650px;
+      color: blue;
+      font-size:xx-large ;
+      text-align: center;
+  }
+  .h6{
+      margin-top:30PX ;
+      margin-left:650px ;
+      color: gold;
+      font-size: xx-large;
+      text-align: center;
+  }
+  .picture-in-picture{
+      color: red;
+      font-size: xx-large;
+      text-align: center;
+  }
+  .p-2{
+      color: cyan;
+      font-size: xx-large;
+      text-align: center;
+  }
+  .P-3{
+      color: mediumspringgreen;
+      font-size: xx-large;
+      text-align: center;
+  }
+  .h7{
+      color: rgb(118, 0, 131);
+      font-size: xx-large;
+  }
+  .p-4{
+      color:gold;
+      font-size: xx-large;
+      text-align: center;
+  }
+  .logo-1{
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 400px;
+      cursor: pointer;
+  }
+  .logo-2{
+      position: absolute;
+      margin-top: 250px;
+      margin-left: 600px;
+      cursor: pointer;
+  }
+  .h-7{
+      color: green;
+      font-size: xx-large;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+  }
+  .contact{
+      text-align: center;
+      color: coral;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: xx-large;
+  }
+  .ex{
+      color: darkturquoise;
+      text-align: center;
+      font-size: xx-large;
+      text-decoration: solid;
+      margin-top: 300px;
+  }
+  .result{
+      color: blue;
+      text-align: center;
+      text-decoration: solid;
+      font-size: xx-large;
+      margin-top: 300px;
+      align-content: center;
+  }
+  .group{
+      color: white;
+      text-align: center;
+      font-size: xx-large;
+  }
+  .result-photo{
+      color: white;
+      font-size: xx-large;
+      cursor: pointer;
+  }
+  .CONTACT-2{
+      text-align: center;
+      color: coral;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: xx-large;
+  }
+  .my-school-2::before{content:"🏫";
+  left:100px;
+   
+     border:9px solid red;
+     width:400px;}
+     *{text-allign:center;}
+     p::first-letter{font-size:200%;
+      color:darkgray}
+  </style>
+</head>
+<body>
+  <p class="my-school-2">("IDEAL SCHOOL AND COLLEGE")</p>
+  <div class="menu_bar">
+  <ul>
+    <li class="active"><i class="fa-solid fa-house"></i><a href="#">HOME</a></li>
+    <li><i class="fa-solid fa-clone"></i><ia href="#">SERVICE</a><i class="fa-solid fa-caret-down"></i>
+      <div class="sub_menu">
+        <ul>
+          <li class="hover-me"><a href="#">ADMISSION</a><i class="fa-solid fa-angle-right"></i>
+          <div class="sub_menu-2">
+            <ul>
+                <li><a href="imformation.html">ONLINE</a></li>
+                <li><a href="online.html">OFLINE</a></li>
+            </ul>
+          </div>
+          </li>
+          <li><a href="exam.html">EXAM</a></li>
+          <li><a href="result.html">RESULT</a></li>
+        </ul>
+      </div>
+    </li>
+     <li  class="fa-solid fa-user"></i><a href="about us .html">ABOUT US</a></i></li>
+    <li><i class="fa-solid fa-phone"></i><a href="contact.html">CONTACT</a></li> 
+  </ul>
+  </div>
+  <img class="logo-2"  src="https://d3or5urpu0oqw6.cloudfront.net/images/slider_images/tgtagjBNzgS2qESwzhRRAfqDj17uMOMttOopPScx.jpeg" width="550">
+  <img class="logo-1"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfI7wywaQ_YvlpjqKDORMLCrHABeg4hOLiTw&s" width="200">
+  <h1 class="h4">WHY CHOOSE US:</h1>
+  <h2 class="h5">IDEAL SCHOOL AND COLLEGE</h2>
+<BR>
+<BR>
+      <details><summary style="color:brown">Ideal school</summary>
+  <P class="picture-in-picture">In envisioning the ideal school and college, one must imagine institutions that not only impart knowledge but also cultivate a nurturing environment where students thrive academically, socially, and emotionally. These educational establishments should embody a blend of progressive pedagogy, inclusivity, and real-world preparedness, shaping individuals who are not only skilled professionals but also compassionate and well-rounded citizens.</P>
+<BR>
+<BR>
+  <h3 class="h6">THE BEST THINK IDEAL SCHOOL:</h3>
+  <p class="p-2">The ideal college builds upon the foundation laid by the ideal school but extends its focus towards specialization and real-world application. Higher education in this model would be marked by flexibility and student agency, allowing individuals to tailor their academic paths according to their interests and career aspirations.
+
+    Academic rigor would be complemented by practical experience. Internships, research projects, and industry partnerships would be integral components of the curriculum, providing students with hands-on learning opportunities that bridge the gap between theory and practice. The ideal college would also offer robust career services, helping students navigate the transition from academia to the professional world with confidence.
+    
+    Faculty members in this ideal setting would not only be experts in their fields but also dedicated mentors, guiding students through their academic and professional journeys. The relationship between students and faculty would be collaborative, with an emphasis on open dialogue and personalized support.
+<BR>
+<BR>
+<br>
+<br>
+    Moreover, the ideal college would foster a vibrant campus life that supports both intellectual and personal growth. Campus resources would include a range of support services, from mental health counseling to academic advising. Student organizations and activities would reflect a broad spectrum of interests, encouraging engagement and community building.
+    
+    In this ideal vision, inclusivity would continue to be a priority. The college would work to ensure that all students have equal access to resources and opportunities, regardless of their background. Programs aimed at reducing barriers to education and promoting diversity would be actively pursued.
+<BR>
+<BR>
+<br>
+<br>
+    
+    Finally, sustainability and global responsibility would be embedded in the college’s mission. Students would be encouraged to consider the environmental and social impacts of their actions, preparing them to contribute positively to the world beyond graduation.</p>
+    <h4 class="h6">CONCLUSION:</h4>
+<BR>
+<BR>
+<br>
+<br>
+    <P class="P-3">The ideal school and college represent more than just places of learning; they are vibrant communities where education is a transformative experience. By fostering an environment that values diverse talents, promotes holistic development, and prepares students for the complexities of the modern world, these institutions can cultivate individuals who are not only knowledgeable but also capable of making meaningful contributions to society.</P>
+<br>
+<br>
+<br>
+<br>
+<h1 class="h7">THE VIDEO OF IDEAL SCHOOL AND COLLEGE:</h1>
+    <iframe width="650" height="315" src="https://www.youtube.com/embed/kuAXQDNydCE?si=3RX7vSzvW4Epc5O_" title="IDEAL SCHOOL AND COLLEGE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/B14OoE5RjWw?si=0BXXbTtEbtJGyBRf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="p-4">An ideal school and college system is one that effectively nurtures students’ academic, personal, and social development while preparing them for future challenges and opportunities. Here’s a comprehensive vision of what an ideal educational system might encompass:
+
+      Ideal School
+      Student-Centered Learning
+      
+      Personalized Education: Adapts to individual learning styles, strengths, and interests.
+      Active Engagement: Uses interactive and experiential learning methods to engage students in their education.
+      Holistic Development
+<br>
+<br>
+<br>
+<br>
+      Balanced Curriculum: Combines core subjects with arts, physical education, and life skills.
+      Emotional Support: Provides counseling services and programs to support students’ mental health and emotional well-being.
+      Inclusive Environment
+<br>
+<br>
+<br>
+<br>
+<br>
+      Accessibility: Ensures resources and accommodations are available for students with diverse learning needs.
+      Cultural Sensitivity: Promotes diversity and inclusion, respecting and valuing different backgrounds and perspectives.
+      Innovative Teaching Practices
+      
+      Project-Based Learning: Encourages hands-on projects that connect classroom learning to real-world applications.
+      Technology Integration: Uses technology effectively to enhance learning, while also teaching digital literacy and responsible use.
+      Community Involvement
+<br>
+<br>
+<br>
+<br>
+<br>
+      Parental Engagement: Fosters strong communication and partnership with families to support student success.
+      Local Partnerships: Collaborates with local businesses and organizations to provide real-world learning opportunities.
+      Supportive and Safe Environment
+      
+      Positive Discipline: Employs restorative practices and positive behavior support instead of punitive measures.
+      Safety and Security: Ensures a safe and welcoming environment for all students.
+      Professional Development for Educators
+<br>
+<br>
+<br>
+<br>
+      Continuous Training: Provides ongoing professional development to keep teachers up-to-date with the latest educational practices and technologies.
+      Supportive Leadership: Ensures school leaders are approachable and committed to fostering a positive school culture.
+      Sustainability and Environmental Stewardship
+<br>
+<br>
+<br>
+<br>
+<br>
+      Green Practices: Implements environmentally friendly practices and promotes awareness about sustainability.
+      Ideal College
+      Academic Excellence and Innovation
+      
+      Rigorous Curriculum: Offers challenging coursework that prepares students for their chosen fields and encourages critical thinking.
+      Research Opportunities: Provides access to research projects and encourages students to engage in scholarly inquiry.
+      Career Preparation
+<br>
+<br>
+<br>
+<br>
+      Internships and Networking: Facilitates internships, co-op programs, and networking opportunities to help students gain practical experience and build professional connections.
+      Career Services: Offers robust career counseling, resume workshops, and job placement support.
+      Diverse and Inclusive Community
+<br>
+<br>
+<br>
+<br>
+<br>
+      Global Perspective: Encourages study abroad programs and intercultural exchanges to broaden students’ global understanding.
+      Equity and Inclusion: Ensures a campus environment where all students feel valued and have equal access to resources and opportunities.
+      Personal Growth and Development
+      
+      Leadership Programs: Provides opportunities for students to develop leadership skills through student organizations and extracurricular activities.
+      Wellness and Support Services: Offers comprehensive support services, including mental health counseling, academic advising, and wellness programs.
+      Flexible Learning Options
+<br>
+<br>
+<br>
+<br>
+      Varied Learning Paths: Offers a range of learning formats, including online courses, part-time studies, and interdisciplinary programs.
+      Adaptability: Allows for adjustments in academic plans and schedules to accommodate students’ evolving interests and career goals.
+      Effective Administration
+<br>
+<br> 
+<br>
+<br>
+<br>
+      Transparent Policies: Maintains clear and fair policies regarding admissions, grading, and student conduct.
+      Resource Allocation: Ensures that resources are used effectively to support student learning and institutional goals.
+      Engaged Alumni Network
+<br>
+<br>
+<br>
+<br>
+      Alumni Relations: Builds a strong alumni network that provides mentorship, networking opportunities, and support for current students.
+      An ideal school and college system creates an enriching, supportive, and adaptive environment that prepares students for lifelong success, not only academically but also personally and professionally. It balances innovation with tradition and adapts to the evolving needs of students and society.
+    </p></details>
+      
+      
+      </p>
+      <footer><a href="#">@ideal school
+        </a></footer>
+      <footer><button type="button" style="color:rgb(74, 25, 165)">@for more</button></footer>
+
+
+</body>
+</html>
